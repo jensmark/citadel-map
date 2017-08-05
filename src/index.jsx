@@ -14,7 +14,7 @@ const style = {
     "raster-tiles": {
       "type": "raster",
       "tiles": [
-        "http://localhost:3000/tiles/base/{z}/{x}/{y}/tile.jpg",
+        window.location.origin + "/tiles/base/{z}/{x}/{y}/tile.jpg",
       ],
       "tileSize": 256,
       "minzoom": 0,
