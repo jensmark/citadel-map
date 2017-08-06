@@ -6,8 +6,9 @@
   "scripts": {
     "install": "node prepare.js",
     "postinstall": "npm run build",
-    "build": "webpack --config webpack.config.js",
-    "start": "node app.js"
+    "build": "webpack --config webpack.config.js --progress",
+    "start": "node app.js",
+    "start-dev": "webpack --config webpack.config.js --progress --watch & npm run start"
   },
   "author": "Jens Markussen",
   "license": "MIT",

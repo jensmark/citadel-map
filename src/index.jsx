@@ -5,7 +5,11 @@ import ReactMapboxGl, { Layer, Source, ZoomControl, RotationControl } from "reac
 const Map = ReactMapboxGl({
   minZoom: 0,
   maxZoom: 7,
-  renderWorldCopies: false
+  renderWorldCopies: false,
+  maxBounds: [
+    [-70.35, -52.95],
+    [70.40, 52.95]
+  ]
 });
 
 const style = {
@@ -30,7 +34,17 @@ const style = {
   }]
 }
 
+let handleClick = function (a,b,c) {
+    console.log(a,b,c)
+}
+
 class App extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+  }
+
   render () {
     return (
         <Map
